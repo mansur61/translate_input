@@ -1,43 +1,28 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# My Package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+**My Package** is a Dart package for easy integration with the Google Cloud Translation API. It helps you translate text between different languages effortlessly. Currently, it supports 2 languages. These languages ​​are English and Turkish.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Supports automatic text translation using Google Cloud Translation API.
+- Easy to integrate into both Dart and Flutter projects.
+- Simple API to translate text between different languages.
+- Customizable translations with optional configurations.
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To get started with this package, follow the steps below:
 
-## Usage
+1. **Activate Google Cloud Translation API**:  
+   - Go to [Google Cloud Console](https://console.cloud.google.com/).
+   - Enable the **Cloud Translation API** service for your project.
+   - Obtain the API Key for your project.
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+2. **Install the Package**:  
+   Add the following dependency to your `pubspec.yaml` file:
 
-```dart
-const like = 'sample';
-```
+   ```yaml
+   dependencies:
+     my_package: ^1.0.0
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
-
-
-TR: https://console.cloud.google.com/ adresinden  Cloud Translation API servisini aktif ediniz ve aktif eylediğiniz projenin Api Key'i temin ediniz.
-EN: Activate the Cloud Translation API service from https://console.cloud.google.com/ and obtain the API Key of the project you activated.
+![Preview](https://raw.githubusercontent.com/your-username/your-repo/main/assets/preview.png)
