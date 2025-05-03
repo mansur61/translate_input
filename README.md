@@ -29,5 +29,5 @@ To get started with this package, follow the steps below:
 
 Below is a screenshot (video) of the translate_input component:
 
-![translate_input preview](https://drive.google.com/file/d/1OW6Rmk7QSy8yt9sFIshJteXVoVtcJfQP/view?usp=sharing)
+https://drive.google.com/file/d/1OW6Rmk7QSy8yt9sFIshJteXVoVtcJfQP/view?usp=sharing
 
