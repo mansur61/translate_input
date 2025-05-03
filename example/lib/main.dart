@@ -99,6 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
              CustomInputTranslate(
             controller: TextEditingController(text: ""),
             translateInput: TranslateApi(apiKey: "your-api-key"),
+            isHiddenTranslatedText:true
            ),
           ],
         ),

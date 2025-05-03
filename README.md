@@ -25,4 +25,9 @@ To get started with this package, follow the steps below:
    dependencies:
      my_package: ^1.0.0
 
-![Preview](https://raw.githubusercontent.com/your-username/your-repo/main/assets/preview.png)
+## 📸 Preview
+
+Below is a screenshot (video) of the translate_input component:
+
+![translate_input preview](https://drive.google.com/file/d/1OW6Rmk7QSy8yt9sFIshJteXVoVtcJfQP/view?usp=sharing)
+

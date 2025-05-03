@@ -5,3 +5,8 @@
 ## 0.0.2
 
 * Bu versiyonda example dosyası eklendi
+
+
+## 0.0.3
+* Bu verisyoda paket önizleme videosu eklendi
+* isHiddenTranslatedText parametre kullanımı eklendi
