@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
              CustomInputTranslate(
             controller: TextEditingController(text: ""),
-            translateInput: TranslateApi(apiKey: "AIzaSyAQygpM7QSP4shHM8qzH3bUuNhY2dayAjM"),//your-api-key
+            translateInput: TranslateApi(apiKey: "your-api-key"),//
             isHiddenTranslatedText:true,
             isHiddenButton: false,
            ),
