@@ -1,4 +1,6 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'translate_api.dart';
 
 class CustomInputTranslate extends StatefulWidget {
@@ -9,17 +11,19 @@ class CustomInputTranslate extends StatefulWidget {
   final Widget? child; // Kullanıcıdan alınacak özel widget
   final Widget Function(BuildContext context, String translatedText)?
       translatedWidgetBuilder; // Çeviri sonucunu göstermek için
-  final bool isHiddenTranslatedText;
+  final bool isHiddenTranslatedText; // Çeviri sonucunu yazısını göstermek istiyor musun
+  final bool isHiddenButton; // Çeviri butonunu  göstermek istiyor musun
 
   const CustomInputTranslate({
+    Key? key,
     required this.translateInput,
     required this.controller,
-    this.child,
-    this.translatedWidgetBuilder,
     this.initialLanguage = 'en',
     this.languages = const ['en', 'tr'],
-    Key? key,
+    this.child,
+    this.translatedWidgetBuilder,
     this.isHiddenTranslatedText = false,
+    this.isHiddenButton = false,
   }) : super(key: key);
 
   @override
@@ -41,6 +45,9 @@ class _CustomInputTranslateState extends State<CustomInputTranslate> {
     setState(() {
       _selectedLanguage = newLanguage;
     });
+    if (widget.isHiddenButton) {
+      _translateText();
+    }
   }
 
   // Çeviri fonksiyonu
@@ -84,8 +91,6 @@ class _CustomInputTranslateState extends State<CustomInputTranslate> {
                   .toList(),
             ),
 
-            // TextField - düzeltildi
-            //const SizedBox(width: 8),
             Expanded(
               child: TextFormField(
                 controller: widget.controller,
@@ -98,14 +103,16 @@ class _CustomInputTranslateState extends State<CustomInputTranslate> {
           ],
         ),
         // Çeviri butonu
-        ElevatedButton(
-          onPressed: _translateText,
-          child: const Text('Çevir'),
-        ),
+        !widget.isHiddenButton
+            ? ElevatedButton(
+                onPressed: _translateText,
+                child: const Text('Çevir'),
+              )
+            : const SizedBox(),
 
         // Çeviri sonucu
-        widget.controller.text.isNotEmpty
-            ? widget.isHiddenTranslatedText
+        widget.isHiddenTranslatedText
+            ? widget.controller.text.isNotEmpty
                 ? widget.translatedWidgetBuilder != null
                     ? widget.translatedWidgetBuilder!(context, _translatedText)
                     : Text(_translatedText,

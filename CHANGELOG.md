@@ -14,3 +14,7 @@
 ## 0.0.4
 * Bu verisyoda paket önizleme videosu ekleme gözükmedi link olarak koyulması sağlandı
  
+## 0.0.5
+* Bu verisyoda Çevir butonu dinamik olarak gösterilip/gösterilmeme durumu eklendi. Gösterilemdiği durumlarda seçilen dili
+algılayarak otomatik çevirme işlemini yapması sağlandı
+ 
